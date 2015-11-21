@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,8 +15,55 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Choose " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ic3-9U-ldr">
+                                <rect key="frame" x="210" y="152" width="98" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="HyA-pk-gHx"/>
+                                    <constraint firstAttribute="width" constant="98" id="uOG-QN-8DV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nothing" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bch-8Z-G4g">
+                                <rect key="frame" x="316" y="158" width="264" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oMq-QY-mti">
+                                <rect key="frame" x="20" y="193" width="560" height="162"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="TTJ-ci-LwA"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="hkj-fz-HMx"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color Picker" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Le-wf-SQh">
+                                <rect key="frame" x="253" y="35" width="95" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1529411765" green="0.16862745100000001" blue="0.21176470589999999" alpha="0.95999999999999996" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="oMq-QY-mti" secondAttribute="trailing" constant="20" symbolic="YES" id="5jQ-9O-mM6"/>
+                            <constraint firstItem="Bch-8Z-G4g" firstAttribute="centerY" secondItem="ic3-9U-ldr" secondAttribute="centerY" id="6Nd-jZ-d8z"/>
+                            <constraint firstAttribute="trailing" secondItem="Bch-8Z-G4g" secondAttribute="trailing" constant="20" symbolic="YES" id="83T-Qt-aug"/>
+                            <constraint firstAttribute="centerX" secondItem="ic3-9U-ldr" secondAttribute="centerX" constant="41" id="P1r-ai-mEJ"/>
+                            <constraint firstAttribute="centerY" secondItem="ic3-9U-ldr" secondAttribute="centerY" constant="131.5" id="Pch-Wx-qPo"/>
+                            <constraint firstAttribute="centerX" secondItem="2Le-wf-SQh" secondAttribute="centerX" id="Ple-U8-Gtp"/>
+                            <constraint firstItem="oMq-QY-mti" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="RvD-1H-Iia"/>
+                            <constraint firstAttribute="centerY" secondItem="2Le-wf-SQh" secondAttribute="centerY" constant="254.5" id="g0Q-4K-76H"/>
+                            <constraint firstItem="Bch-8Z-G4g" firstAttribute="leading" secondItem="ic3-9U-ldr" secondAttribute="trailing" constant="8" symbolic="YES" id="lI6-D9-Zhg"/>
+                            <constraint firstItem="oMq-QY-mti" firstAttribute="top" secondItem="ic3-9U-ldr" secondAttribute="bottom" constant="8" symbolic="YES" id="pd6-Hb-V3k"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lblNothing" destination="Bch-8Z-G4g" id="dZr-DR-zqq"/>
+                        <outlet property="viewPicker" destination="oMq-QY-mti" id="LCw-NH-ZS9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
